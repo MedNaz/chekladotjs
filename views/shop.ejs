@@ -11,61 +11,11 @@
       rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="style/shop.css">
+    <link rel="stylesheet" href="../public/stylesheets/shop.css">
 </head>
 <body>
 
-    <!-- navbar -->
-    <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="collapsed navbar-toggle" data-target ="#main-menu" data-toggle="collapse">
-                        <i class="material-icons">menu</i>
-
-                    </button>
-                    <a href="#" class="navbar-brand">Big Market</a>
-                </div><!-- //navbar-header -->
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="nav navbar-nav navbar-main-menu">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle icon-fix" data-toggle="dropdown" role="button">
-                                <span>Catégories</span> <i class="material-icons">expand_more</i>
-                            </a>
-                            <ul class="dropdown-menu category-dropdown">
-                                <li><a href=""><i class="material-icons">smartphone</i> Téléphone mobile</a></li>
-                                <li><a href=""><i class="material-icons">tablet_android</i> Tablette</a></li>
-                                <li><a href=""><i class="material-icons">computer</i> Ordinateur</a></li>
-                                <li><a href=""><i class="material-icons">tv</i> TV</a></li>
-                                <li><a href=""><i class="material-icons">photo_camera</i> Photo et Caméra</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr class="visible-xs-block">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">Sign In</a>
-                        </li>
-                        <li class="navbar-highlight"><a href="#">Sign Up</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <form action="" class="navbar-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Cherchez quelque chose">
-                                </div>
-                                <button type="submit" class="btn btn-default icon-fix search-icon"><i class="material-icons">search</i> </button>
-
-                            </form>
-                        </li>
-
-
-                    </ul>
-
-                </div>
-            </div><!-- // container fluid for the navbar -->
-        </nav>
-    </header>
+<%- include('ejs/navbar') -%>
 
     <section id="shop-header">
         <div class="container-fluid shop-overlay">
@@ -79,18 +29,19 @@
                 <div class="col-sm-5 col-sm-push-1 shop-name-and-small-details">
                     <div class="row">
                         <div class="col-xs-4">
-                            <h5>Shop name</h5>
+                            <h5><%= shop.shopname %></h5>
+
                         </div>
                         <div class="col-xs-2 ">
                             <div class="is-available"></div>
                         </div>
                     </div><!-- shop name -->
                     <div class="row">
-                        <div class="col-xs-3 shop-category">
-                            <h6><i class="material-icons">smartphone</i> Téléphonie</h6>
+                        <div class="col-xs-4 shop-category">
+                            <h6><i class="material-icons">location_on</i> <%= shop.shopCategory%></h6>
                         </div><!-- shop category -->
-                        <div class="col-xs-3 shop-address">
-                            <h6><i class="material-icons">location_on</i> Usto, Oran </h6>
+                        <div class="col-xs-4 shop-address">
+                            <h6><i class="material-icons">location_on</i> <%= shop.shopAddress%> </h6>
                         </div><!-- shop address -->
                     </div><!-- shop small details -->
                 </div><!-- shop name and small details -->
@@ -103,8 +54,7 @@
                         <div class="col-xs-6">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p class="shop-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima exercitationem laudantium cupiditate iusto neque, adipisci placeat amet vel temporibus rerum quaerat totam itaque, accusamus at tenetur nisi optio veniam.
-                                    lorem</p>
+                                    <p class="shop-description"><%= shop.ShopDescription%></p>
                                 </div>
                             </div>
 
@@ -113,12 +63,12 @@
                                     <div class="row">
 
                                         <div class="col-xs-1 icon">
-                                            <a href="">
+                                            <a href="<%=shop.sociallinks.facebook%>">
                                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                         <div class="col-xs-1 icon">
-                                            <a href="">
+                                            <a href="<%=shop.sociallinks.googleplus%>">
                                                 <i class="fa fa-google-plus-official" aria-hidden="true"></i>
                                             </a>
 
@@ -127,7 +77,7 @@
 
                                         </div>
                                         <div class="col-xs-1 icon">
-                                           <a href="">
+                                           <a href="<%= shop.sociallinks.twitter%>">
                                                <i class="fa fa-twitter" aria-hidden="true"></i>
                                            </a>
 
@@ -148,7 +98,7 @@
                                     </div>
                                     <div class="row number">
                                         <div class="col-xs-12">
-                                            <p>120</p>
+                                            <p><%= shop.popularity.visitsNum%></p>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +110,7 @@
                                     </div>
                                     <div class="row number">
                                         <div class="col-xs-12">
-                                            <p>120</p>
+                                            <p><%= shop.popularity.popularity%></p>
                                         </div>
                                     </div>
                                 </div>
@@ -172,7 +122,7 @@
                                     </div>
                                     <div class="row number">
                                         <div class="col-xs-12">
-                                            <p>120</p>
+                                            <p><%= shop.popularity.likes%></p>
                                         </div>
                                     </div>
                                 </div>
@@ -204,12 +154,87 @@
                             </div>
 
                             <div class="row">
+                                <% for(var i=0; i<products.length; i++) {%>
+
+
                                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product-wrapper">
 
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="<%= products[i].productImg%>" class="img-responsive" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
+                                                <h5 class="product-name"><a href="#"><%= products[i].name%></a></h5>
+                                                <h6 class="store-name"><a href="#"><%= products[i].productSeller%></a></h6>
+                                                <h6 class="publication-date"><a href="#"><%= products[i].publicationDate%></a></h6>
+                                            </div>
+                                        </div><!-- row -->
+                                        <div class="row product-description">
+                                            <div class="col-lg-12">
+                                                <p><%= products[i].productDescription%></p>
+                                            </div>
+                                        </div><!-- product description -->
+                                        <div class="row product-rating">
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+
+                                        </div><!-- product rating -->
+                                        <div class="row price-call-to-action">
+                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
+                                                <p class="price"><%= products[i].productPrice%> <em>DA</em></p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
+                                                <a href="#" class="btn btn-primary">Détails</a>
+                                            </div>
+                                        </div><!-- price and call to action -->
+                                    </div><!-- product -->
+                                </div><!-- product wrapper -->
+                                <% } %>
+
+
+                            </div><!-- row -->
+                            <div class="row slide-row">
+                                <div class="col-xs-1 slide-control left">
+                                    <i class="material-icons">chevron_left</i>
+                                </div>
+                                <div class="col-xs-1 col-xs-offset-10 slide-control right">
+                                    <i class="material-icons">chevron_right</i>
+                                </div>
+                            </div>
+                        </div>
+    </section><!-- main products -->
+    <section class="product-to-sell">
+        <div class="container-fluid category">
+                            <div class="row category-header">
+                                <div class="col-xs-6">
+                                    <h3>Top produits</h3>
+                                </div>
+                                <div class="col-xs-4 col-xs-offset-2 text-right load-more">
+                                    <a href="#" class="">Afficher plus..</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product-wrapper">
+
+                                    <div class="product-container">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -255,7 +280,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -301,7 +326,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -348,7 +373,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -419,7 +444,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -465,7 +490,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -511,7 +536,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -558,7 +583,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -629,7 +654,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -675,7 +700,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -721,7 +746,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -768,217 +793,7 @@
                                     <div class="product-container">
                                         <div class="row">
                                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
-                                            </div>
-                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
-                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
-                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
-                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
-                                            </div>
-                                        </div><!-- row -->
-                                        <div class="row product-description">
-                                            <div class="col-lg-12">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
-                                            </div>
-                                        </div><!-- product description -->
-                                        <div class="row product-rating">
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-
-                                        </div><!-- product rating -->
-                                        <div class="row price-call-to-action">
-                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
-                                                <p class="price">1000 <em>DA</em></p>
-                                            </div>
-                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
-                                                <a href="#" class="btn btn-primary">Détails</a>
-                                            </div>
-                                        </div><!-- price and call to action -->
-                                    </div><!-- product -->
-                                </div><!-- product wrapper -->
-
-
-                            </div><!-- row -->
-                            <div class="row slide-row">
-                                <div class="col-xs-1 slide-control left">
-                                    <i class="material-icons">chevron_left</i>
-                                </div>
-                                <div class="col-xs-1 col-xs-offset-10 slide-control right">
-                                    <i class="material-icons">chevron_right</i>
-                                </div>
-                            </div>
-                        </div>
-    </section><!-- main products -->
-    <section class="product-to-sell">
-        <div class="container-fluid category">
-                            <div class="row category-header">
-                                <div class="col-xs-6">
-                                    <h3>Top produits</h3>
-                                </div>
-                                <div class="col-xs-4 col-xs-offset-2 text-right load-more">
-                                    <a href="#" class="">Afficher plus..</a>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product-wrapper">
-
-                                    <div class="product-container">
-                                        <div class="row">
-                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
-                                            </div>
-                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
-                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
-                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
-                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
-                                            </div>
-                                        </div><!-- row -->
-                                        <div class="row product-description">
-                                            <div class="col-lg-12">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
-                                            </div>
-                                        </div><!-- product description -->
-                                        <div class="row product-rating">
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-
-                                        </div><!-- product rating -->
-                                        <div class="row price-call-to-action">
-                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
-                                                <p class="price">1000 <em>DA</em></p>
-                                            </div>
-                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
-                                                <a href="#" class="btn btn-primary">Détails</a>
-                                            </div>
-                                        </div><!-- price and call to action -->
-                                    </div><!-- product -->
-                                </div><!-- product wrapper -->
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product-wrapper">
-
-                                    <div class="product-container">
-                                        <div class="row">
-                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
-                                            </div>
-                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
-                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
-                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
-                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
-                                            </div>
-                                        </div><!-- row -->
-                                        <div class="row product-description">
-                                            <div class="col-lg-12">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
-                                            </div>
-                                        </div><!-- product description -->
-                                        <div class="row product-rating">
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-
-                                        </div><!-- product rating -->
-                                        <div class="row price-call-to-action">
-                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
-                                                <p class="price">1000 <em>DA</em></p>
-                                            </div>
-                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
-                                                <a href="#" class="btn btn-primary">Détails</a>
-                                            </div>
-                                        </div><!-- price and call to action -->
-                                    </div><!-- product -->
-                                </div><!-- product wrapper -->
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product-wrapper">
-
-                                    <div class="product-container">
-                                        <div class="row">
-                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
-                                            </div>
-                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
-                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
-                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
-                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
-                                            </div>
-                                        </div><!--
-                                         row -->
-                                        <div class="row product-description">
-                                            <div class="col-lg-12">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
-                                            </div>
-                                        </div><!-- product description -->
-                                        <div class="row product-rating">
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                                <i class="material-icons">star_rate</i>
-                                            </div>
-
-                                        </div><!-- product rating -->
-                                        <div class="row price-call-to-action">
-                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
-                                                <p class="price">1000 <em>DA</em></p>
-                                            </div>
-                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
-                                                <a href="#" class="btn btn-primary">Détails</a>
-                                            </div>
-                                        </div><!-- price and call to action -->
-                                    </div><!-- product -->
-                                </div><!-- product wrapper -->
-                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 product-wrapper">
-
-                                    <div class="product-container">
-                                        <div class="row">
-                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                                <img src="../public/images/iphone_PNG5728.png" class="img-responsive" alt="">
                                             </div>
                                             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
                                                 <h5 class="product-name"><a href="#">Nom du produit</a></h5>
@@ -1040,7 +855,7 @@
             <div class="col-xs-4 user ">
                 <div class="row">
                     <div class="col-xs-12">
-                        <img src="img/johndoe.jpg" alt="" class="img-responsive img-circle">
+                        <img src="../public/images/johndoe.jpg" alt="" class="img-responsive img-circle">
                     </div>
                     <div class="col-xs-12 text-center">
                         <h6>John Doe</h6>
@@ -1050,7 +865,7 @@
             <div class="col-xs-4 user active">
                 <div class="row">
                     <div class="col-xs-12">
-                        <img src="img/johndoe.jpg" alt="" class="img-responsive img-circle">
+                        <img src="../public/images/johndoe.jpg" alt="" class="img-responsive img-circle">
                     </div>
                     <div class="col-xs-12 text-center">
                         <h6>John Doe</h6>
@@ -1060,7 +875,7 @@
             <div class="col-xs-4 user">
                 <div class="row">
                     <div class="col-xs-12">
-                        <img src="img/johndoe.jpg" alt="" class="img-responsive img-circle">
+                        <img src="../public/images/johndoe.jpg" alt="" class="img-responsive img-circle">
                     </div>
                     <div class="col-xs-12 text-center">
                         <h6>John Doe</h6>

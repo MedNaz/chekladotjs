@@ -9,61 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="style/signup.css">
+    <link rel="stylesheet" href="../public/stylesheets/signup.css">
 </head>
 <body>
-    <!-- navbar -->
-    <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="collapsed navbar-toggle" data-target ="#main-menu" data-toggle="collapse">
-                        <i class="material-icons">menu</i>
-
-                    </button>
-                    <a href="#" class="navbar-brand">Big Market</a>
-                </div><!-- //navbar-header -->
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="nav navbar-nav navbar-main-menu">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle icon-fix" data-toggle="dropdown" role="button">
-                                <span>Catégories</span> <i class="material-icons">expand_more</i>
-                            </a>
-                            <ul class="dropdown-menu category-dropdown">
-                                <li><a href=""><i class="material-icons">smartphone</i> Téléphone mobile</a></li>
-                                <li><a href=""><i class="material-icons">tablet_android</i> Tablette</a></li>
-                                <li><a href=""><i class="material-icons">computer</i> Ordinateur</a></li>
-                                <li><a href=""><i class="material-icons">tv</i> TV</a></li>
-                                <li><a href=""><i class="material-icons">photo_camera</i> Photo et Caméra</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr class="visible-xs-block">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li  class="navbar-highlight">
-                            <a href="#">Sign Up</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <form action="" class="navbar-form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Cherchez quelque chose">
-                                </div>
-                                <button type="submit" class="btn btn-default icon-fix search-icon"><i class="material-icons">search</i> </button>
-
-                            </form>
-                        </li>
-
-
-                    </ul>
-
-                </div>
-            </div><!-- // container fluid for the navbar -->
-        </nav>
-    </header>
-
-    <!-- // navbar -->
+<%- include('ejs/navbar') -%>
 
     <section id="intro">
         <div class="jumbotron">

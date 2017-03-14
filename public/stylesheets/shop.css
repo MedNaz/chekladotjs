@@ -93,7 +93,7 @@ body{
 #shop-header .shop-overlay{
    background-color: #F5F5F5;
    height: 300px;
-    background-image: url(../img/diagmonds_@2X.png), linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); ;
+    background-image: url(../images/diagmonds_@2X.png), linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); ;
     position: relative;
 
 }
@@ -116,7 +116,7 @@ body{
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    background: url(../img/diagmonds_@2X.png);
+    background: url(../images/diagmonds_@2X.png);
     background-size: cover;
     border: 5px solid #fff;
 }
