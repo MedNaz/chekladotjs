@@ -5,9 +5,15 @@ var express = require("express");
 
 var route = express.Router();
 
+
 route.get('/', function(req, res){
 
     res.render('signin');
+});
+
+route.post('/', function (req, res) {
+    res.send('Sign in Form submitted');
+
 });
 
 module.exports = route;
