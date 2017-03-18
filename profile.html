@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The big market</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="collapsed navbar-toggle" data-target ="#main-menu" data-toggle="collapse">
+                        <i class="material-icons">menu</i>
+
+                    </button>
+                    <a href="#" class="navbar-brand">Big Market</a>
+                </div><!-- //navbar-header -->
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="nav navbar-nav navbar-main-menu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle icon-fix" data-toggle="dropdown" role="button">
+                                <span>Catégories</span> <i class="material-icons">expand_more</i>
+                            </a>
+                            <ul class="dropdown-menu category-dropdown">
+                                <li><a href=""><i class="material-icons">smartphone</i> Téléphone mobile</a></li>
+                                <li><a href=""><i class="material-icons">tablet_android</i> Tablette</a></li>
+                                <li><a href=""><i class="material-icons">computer</i> Ordinateur</a></li>
+                                <li><a href=""><i class="material-icons">tv</i> TV</a></li>
+                                <li><a href=""><i class="material-icons">photo_camera</i> Photo et Caméra</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr class="visible-xs-block">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Sign In</a>
+                        </li>
+                        <li class="navbar-highlight"><a href="#">Sign Up</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <form action="" class="navbar-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Cherchez quelque chose">
+                                </div>
+                                <button type="submit" class="btn btn-default icon-fix search-icon"><i class="material-icons">search</i> </button>
+
+                            </form>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div><!-- // container fluid for the navbar -->
+        </nav>
+    </header>
+
+    <!-- // navbar -->
+
+    <!-- main wrapper -->
+
+    <div class="container-fluid main-wrapper">
+        <header class="profile-header">
+            <div class="row">
+                <div class="col-md-2 img-container text-center">
+                    <img src="img/johndoe.jpg" alt="" class="img-responsive">
+                </div><!-- img container -->
+                <div class="col-md-6">
+                    <h2 class="username">Hichem Med</h2>
+                    <p class="interests">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet adipisci repudiandae</p>
+                </div><!-- profile description -->
+                <div class="col-md-4 text-right">
+                    <div class="row">
+                        <div class="col-sm-12 edit-button">
+                            <a href="" class="btn btn-default">Edit profile</a>
+                        </div>
+                    </div><!-- edit profile -->
+                    <div class="row">
+                        <div class="col-sm-12 contact-button">
+                            <a href="" class="btn btn-primary">Contact</a>
+                        </div>
+                    </div><!-- contact user -->
+
+                </div><!-- edit or contact -->
+
+            </div><!-- row -->
+
+        </header><!-- profile header -->
+
+        <div class="">
+            <div class="col-sm-3 aside-container">
+                <div class="aside">
+                    <div class="info personal-info">
+                        <h3>Personal information</h3>
+                        <ul>
+                            <li>First name</li>
+                            <li>Last name</li>
+                            <li>Gender</li>
+                            <li>Address</li>
+                        </ul>
+                    </div><!-- info -->
+                    <div class="info following-info">
+                        <h3>Following</h3>
+                        <div class="row shops-followed">
+                            <div class="col-sm-6">
+                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                <h6 class="shop-name text-center"><a href="">Shop name</a></h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                <h6 class="shop-name text-center"><a href="">Shop name</a></h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                <h6 class="shop-name text-center"><a href="">Shop name</a></h6>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                <h6 class="shop-name text-center"><a href="">Shop name</a></h6>
+                            </div>
+                        </div>
+                    </div><!-- info -->
+                    <div class="info groups">
+                        <h3>Groups</h3>
+                        <ul>
+                            <li><a href="">Group1</a></li>
+                            <li><a href="">Group2</a></li>
+                            <li><a href="">Group3</a></li>
+                            <li><a href="">Group4</a></li>
+                            <li class="more-group"><a href="">More</a></li>
+                        </ul>
+                    </div><!-- info -->
+                </div><!-- aside -->
+            </div><!-- aside -->
+
+
+            <div class="col-md-9 products-and-shops">
+                <div class="row">
+                    <div class="col-md-6 heading">
+                        <h4>Shops recently viewed</h4>
+
+                    </div>
+                    <div class="col-xs-4 col-xs-offset-2 text-right load-more">
+                        <a href="#" class="">Afficher plus..</a>
+                    </div>
+                    <div class="shops-container">
+                        <div class="col-md-12">
+                           <div class="row shops-container">
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+
+                           </div>
+
+
+                        </div><!-- row -->
+
+
+                    </div><!-- shops container -->
+
+                </div><!-- shops recently viewed -->
+                <div class="products-container">
+                   <header class="row">
+
+                            <div class="col-md-6  heading">
+                                <h4>Products recently viewed</h4>
+
+                            </div>
+                            <div class="col-xs-4 col-xs-offset-2 text-right load-more">
+                                <a href="#" class="">Afficher plus..</a>
+                            </div>
+
+                    </header>
+                    <div class="row">
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 product-wrapper">
+
+                                    <div class="product-container">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
+                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
+                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
+                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
+                                            </div>
+                                        </div><!-- row -->
+                                        <div class="row product-description">
+                                            <div class="col-lg-12">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
+                                            </div>
+                                        </div><!-- product description -->
+                                        <div class="row product-rating">
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+
+                                        </div><!-- product rating -->
+                                        <div class="row price-call-to-action">
+                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
+                                                <p class="price">1000 <em>DA</em></p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
+                                                <a href="#" class="btn btn-primary">Détails</a>
+                                            </div>
+                                        </div><!-- price and call to action -->
+                                    </div><!-- product -->
+                                </div><!-- product wrapper -->
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 product-wrapper">
+
+                                    <div class="product-container">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
+                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
+                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
+                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
+                                            </div>
+                                        </div><!--
+                                         row -->
+                                        <div class="row product-description">
+                                            <div class="col-lg-12">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
+                                            </div>
+                                        </div><!-- product description -->
+                                        <div class="row product-rating">
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+
+                                        </div><!-- product rating -->
+                                        <div class="row price-call-to-action">
+                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
+                                                <p class="price">1000 <em>DA</em></p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
+                                                <a href="#" class="btn btn-primary">Détails</a>
+                                            </div>
+                                        </div><!-- price and call to action -->
+                                    </div><!-- product -->
+                                </div><!-- product wrapper -->
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 product-wrapper">
+
+                                    <div class="product-container">
+                                        <div class="row">
+                                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                                <img src="img/iphone_PNG5728.png"  class="img-responsive" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-5">
+                                                <h5 class="product-name"><a href="#">Nom du produit</a></h5>
+                                                <h6 class="store-name"><a href="#">Vendeur du produit</a></h6>
+                                                <h6 class="publication-date"><a href="#">14 Mai 2017</a></h6>
+                                            </div>
+                                        </div><!-- row -->
+                                        <div class="row product-description">
+                                            <div class="col-lg-12">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est a ipsam mollitia, voluptatum natus accusamus...</p>
+                                            </div>
+                                        </div><!-- product description -->
+                                        <div class="row product-rating">
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                <i class="material-icons">star_rate</i>
+                                            </div>
+
+                                        </div><!-- product rating -->
+                                        <div class="row price-call-to-action">
+                                            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5">
+                                                <p class="price">1000 <em>DA</em></p>
+                                            </div>
+                                            <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 call-to-action">
+                                                <a href="#" class="btn btn-primary">Détails</a>
+                                            </div>
+                                        </div><!-- price and call to action -->
+                                    </div><!-- product -->
+                                </div><!-- product wrapper -->
+
+
+                            </div><!-- row -->
+                </div><!-- products recently viewed -->
+
+                <div class="">
+                    <header class="row">
+
+                            <div class="col-md-6 heading">
+                                <h4>Shops Followed</h4>
+
+                            </div>
+                            <div class="col-xs-4 col-xs-offset-2 text-right load-more">
+                                <a href="#" class="">Afficher plus..</a>
+                            </div>
+
+                    </header>
+
+                    <div class="shops-container">
+                        <div class="col-md-12">
+                           <div class="row shops-container">
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+                                <div class="col-md-4 shop-wrapper">
+                                    <div class="shop">
+                                        <div class="row shop-img-container">
+                                            <div class="col-xs-12">
+                                                <img src="img/store.jpg" alt="" class="img-responsive">
+                                            </div>
+                                        </div><!-- shop img container -->
+                                        <div class="row text-center shop-detail">
+                                            <h4>Shop name</h4>
+                                            <h5>Category</h5>
+                                            <div class="row product-rating  text-center">
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                    <i class="material-icons">star_rate</i>
+                                                </div>
+
+                                            </div><!-- product rating -->
+                                            <div class="shop-call-to-action">
+                                                <div class="">
+                                                    <button class="btn btn-primary">
+                                                        Visit now
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div><!-- shop information -->
+                                    </div>
+
+                                </div><!-- shop wrapper -->
+
+                           </div>
+
+
+                        </div><!-- row -->
+
+
+                    </div><!-- shops container -->
+                </div><!-- shops recently viewed -->
+            </div><!-- products and shops -->
+
+
+
+
+
+        </div><!-- second wrapper -->
+
+    </div><!-- main wrapper -->
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
